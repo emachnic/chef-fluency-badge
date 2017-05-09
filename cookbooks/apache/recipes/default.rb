@@ -5,7 +5,7 @@
 # Copyright:: 2017, The Authors, All Rights Reserved.
 
 package 'apache2' do
-  package_name 'httpd'
+  package_name 'httpd' if node['platform_family'] == 'rhel'
   action :install
 end
 
